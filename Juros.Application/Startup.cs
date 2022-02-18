@@ -2,14 +2,21 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Juros.Business.Services;
+using Juros.Business.Services.Extern;
+using Juros.Domain.Intefaces.Business;
+using Juros.Domain.Intefaces.Business.Extern;
+using Juros.Domain.Model;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.WebJobs.Host.Bindings;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 
 namespace Juros.Application
@@ -32,6 +39,12 @@ namespace Juros.Application
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Juros.Application", Version = "v1" });
             });
+
+            services.AddSingleton(new Config { ApiUrl = "https://localhost:44370/" });
+            
+            //services
+            services.AddTransient<IJurosServices, JurosService>();
+            services.AddTransient<ITaxaJurosService, TaxaJurosService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
