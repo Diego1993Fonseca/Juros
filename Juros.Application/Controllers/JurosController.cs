@@ -39,9 +39,6 @@ namespace Juros.Application.Controllers
                 });
 
             }
-
-
-
         }
     }
 }

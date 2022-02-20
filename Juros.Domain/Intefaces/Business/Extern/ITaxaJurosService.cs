@@ -10,6 +10,5 @@ namespace Juros.Domain.Intefaces.Business.Extern
     public interface ITaxaJurosService
     {
         ValueTask<JurosDTO> getTaxaJuros();
-
     }
 }
