@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Juros.Infrastructure", "Juros.Infrastructure\Juros.Infrastructure.csproj", "{97D98CEF-5E99-4963-901B-8545CAC98CD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Juros.Infrastructure", "Juros.Infrastructure\Juros.Infrastructure.csproj", "{97D98CEF-5E99-4963-901B-8545CAC98CD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Juros.Domain", "Juros.Domain\Juros.Domain.csproj", "{4975D5EF-2761-4C49-AFB8-04806A391874}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Juros.Domain", "Juros.Domain\Juros.Domain.csproj", "{4975D5EF-2761-4C49-AFB8-04806A391874}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Juros.Business", "Juros.Business\Juros.Business.csproj", "{DB54F7CF-98CD-4175-8B95-9455CBDA1795}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Juros.Business", "Juros.Business\Juros.Business.csproj", "{DB54F7CF-98CD-4175-8B95-9455CBDA1795}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Juros.Application", "Juros.Application\Juros.Application.csproj", "{4D007EE3-E964-40B3-8934-65C84C646093}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Juros.Application", "Juros.Application\Juros.Application.csproj", "{4D007EE3-E964-40B3-8934-65C84C646093}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E9A9D92E-9830-4BE7-842B-A25B202ABFCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{97D98CEF-5E99-4963-901B-8545CAC98CD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -72,5 +71,23 @@ Global
 		{4D007EE3-E964-40B3-8934-65C84C646093}.Release|x64.Build.0 = Release|Any CPU
 		{4D007EE3-E964-40B3-8934-65C84C646093}.Release|x86.ActiveCfg = Release|Any CPU
 		{4D007EE3-E964-40B3-8934-65C84C646093}.Release|x86.Build.0 = Release|Any CPU
+		{E9A9D92E-9830-4BE7-842B-A25B202ABFCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9A9D92E-9830-4BE7-842B-A25B202ABFCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9A9D92E-9830-4BE7-842B-A25B202ABFCD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E9A9D92E-9830-4BE7-842B-A25B202ABFCD}.Debug|x64.Build.0 = Debug|Any CPU
+		{E9A9D92E-9830-4BE7-842B-A25B202ABFCD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E9A9D92E-9830-4BE7-842B-A25B202ABFCD}.Debug|x86.Build.0 = Debug|Any CPU
+		{E9A9D92E-9830-4BE7-842B-A25B202ABFCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9A9D92E-9830-4BE7-842B-A25B202ABFCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9A9D92E-9830-4BE7-842B-A25B202ABFCD}.Release|x64.ActiveCfg = Release|Any CPU
+		{E9A9D92E-9830-4BE7-842B-A25B202ABFCD}.Release|x64.Build.0 = Release|Any CPU
+		{E9A9D92E-9830-4BE7-842B-A25B202ABFCD}.Release|x86.ActiveCfg = Release|Any CPU
+		{E9A9D92E-9830-4BE7-842B-A25B202ABFCD}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2F1D6C6-9325-4A1E-8C46-8164CB9AB8EE}
 	EndGlobalSection
 EndGlobal

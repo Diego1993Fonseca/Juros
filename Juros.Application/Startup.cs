@@ -40,7 +40,7 @@ namespace Juros.Application
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Juros.Application", Version = "v1" });
             });
 
-            services.AddSingleton(new Config { ApiUrl = "https://localhost:44370/" });
+            services.AddSingleton(new Config { ApiUrl = "http://taxajurosapi" });
             
             //services
             services.AddTransient<IJurosServices, JurosService>();
@@ -50,12 +50,11 @@ namespace Juros.Application
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
+
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Juros.Application v1"));
-            }
+     
 
             app.UseHttpsRedirection();
 

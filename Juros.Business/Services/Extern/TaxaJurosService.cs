@@ -29,7 +29,7 @@ namespace Juros.Business.Services.Extern
                     BaseAddress = new Uri(_apiConfig.ApiUrl)
                 };
 
-                var request = new HttpRequestMessage(HttpMethod.Get, $"Juros/taxaJuros");
+                var request = new HttpRequestMessage(HttpMethod.Get, $"juros/taxaJuros");
                
                 var response = await client.SendAsync(request);
 

@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  juros-application:
+    image: juros-application
+    build:
+      context: .
+      dockerfile: Juros.Application/Dockerfile
+    ports:
+      - "44375:80"
+    networks:
+      - juros
+    container_name: jurosapi
+     
+networks:
+ juros:
+   external: true
